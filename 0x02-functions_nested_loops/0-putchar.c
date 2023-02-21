@@ -1,14 +1,14 @@
-#include <stdio .h>
+#include "main.h"
+#include <unistd.h>
+/**
+ * _putchar - writes the character c to standardd output
+ *
+ *
+ * Return: On success 1.
+ * On error, -1 is returned.
+ */
+int _putchar(char c)
+{
+ return (write(1, &c, 1));
+}
 
-/* program that prints _putchar, followed by a new line.
-
-* The program should return 0
-*/
-
-int main(void)
-{ 
-	char name = _putchar
-
-		printf('%c', name)
-
- } 
