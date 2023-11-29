@@ -3,22 +3,20 @@
 /* 
  * @size is the size of the array
  * @action is a pointer to the function you need to use
- * Return:0 we're dealing with integers
+ * Return nothing since  we're dealing with void data type
  */
 
-int int_index(int *array, int size, int (*cmp)(int))
+void array_iterator(int *array, size_t size, void (*action)(int))
 	{
-		int i;
+		unsigned  int i;
 
 
-		if (array == NULL || size <= 0 || cmp == NULL)
-			return (-1);
+		if (array == NULL || action == NULL)
+			return;
 
 
 		for (i = 0; i < size; i++)
 		{
-			if (cmp(array[i]))
-				return (i);
+			action(array[i]);
 		}
-		return (-1);
 	}
